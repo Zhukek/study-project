@@ -1,0 +1,35 @@
+.header {
+  @include block-stack;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 74px;
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    margin: 28px 120px 0 0;
+    padding: 0;
+  }
+  &__link {
+    color: $text-color;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.75;
+    }
+    &:nth-of-type(2) {
+      margin: 0 34px;
+    }
+  }
+}

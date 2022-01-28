@@ -1,0 +1,63 @@
+.training {
+  @include section-base(1200px);
+  padding: 150px 0 120px 0;
+  margin: 0 auto;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 110px;
+
+  &__title {
+    max-width: $article-width;
+    @include text-stack(700, 55px, 60px);
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+  }
+
+  &__image {
+    margin: 0;
+    padding-bottom: 76%;
+    @include background-picture;
+    max-width: 580px;
+    width: 100%;
+    background-image: url(../../images/training.png);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 2;
+    justify-self: end;
+    align-self: start;
+  }
+
+  &__content {
+    max-width: $article-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__text {
+    @include secondary-abstract;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    padding: 0;
+    margin: 0 30px 0 0;
+    text-decoration: none;
+    color: $text-color;
+    @include text-stack(600, 18px, 28px);
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}

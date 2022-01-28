@@ -1,0 +1,83 @@
+.landscape {
+  @include section-stack;
+  padding: 60px 0;
+
+  &__types {
+    margin: 60px 0 50px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: fit-content;
+  }
+
+  &__type {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    width: 650px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    @include text-stack(700, 55px, 60px);
+    letter-spacing: -0.5px;
+    color: $text-color;
+  }
+
+  &__description {
+    margin: 50px 0 80px 0;
+    padding: 0;
+    max-width: $article-width;
+    @include secondary-abstract;
+  }
+
+  &__picture {
+    @include background-picture;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 61.5%;
+    background-image: url(../../images/highway_picture.png);
+  }
+
+  &__buttons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 120px;
+    height: fit-content;
+  }
+
+  &__button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #EBEBEB;
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+    &_right {
+      &::after {
+        @include vector;
+        transform: rotate(180deg);
+      }
+    }
+    &_left {
+      &::after {
+        @include vector;
+      }
+    }
+  }
+}
