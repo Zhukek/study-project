@@ -60,4 +60,44 @@
       opacity: 0.75;
     }
   }
+
+  @media screen and (max-width: 940px) {
+    padding: 40px 0 60px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 40px;
+
+
+    &__title {
+      grid-row: 1;
+      width: 100%;
+    }
+
+    &__image {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 700px;
+      justify-self: center;
+      padding-bottom: 79%;
+    }
+
+    &__content {
+      grid-row: 3;
+    }
+
+    &__links {
+      margin-top: 40px;
+    }
+  }
+
+    @media screen and (max-width: 500px) {
+      border-top: $border-top;
+      &__title {
+        @include text-stack(700, 32px, 40px);
+      }
+
+      &__link {
+        @include text-stack(600, 14px, 20px);
+    }
+  }
 }

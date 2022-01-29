@@ -83,4 +83,29 @@
     padding: 0;
     color: #CFCFCF;
   }
+
+  @media screen and (max-width: 600px) {
+    &__content {
+      padding: 60px 0 25px 0;
+    }
+
+    &__fieldset {
+      margin-top: 40px;
+    }
+
+    &__roadclub {
+      font-weight: 500px;
+      position: relative;
+      &::after {
+        content: '';
+        background-image: url(../../images/Logo.svg);
+        width: 32px;
+        position: absolute;
+        height: 32px;
+        @include background-picture;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
 }

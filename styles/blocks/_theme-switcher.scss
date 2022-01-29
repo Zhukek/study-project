@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    cursor: pointer;
     transition: 0.3s;
     &_theme_dark {
       padding-left: 20px;
@@ -45,5 +46,9 @@
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 }

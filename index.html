@@ -14,6 +14,7 @@
       <a class="header__link" href="#">Велосипеды</a>
       <a class="header__link" href="#">Тренировки</a>
     </nav>
+    <button type="button" class="header__button"></button>
   </header>
 
   <main class="page">
@@ -38,7 +39,17 @@
     </section>
     <section class="landscape">
       <div class="landscape__types">
-        <div class="landscape__type landscape__type_active" id="highway">
+        <div class="landscape__type landscape__type_class_main">
+          <h2 class="landscape__title">Шоссе</h2>
+          <p class="landscape__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+          <div class="landscape__picture"></div>
+        </div>
+        <div class="landscape__type landscape__type_class_second">
+          <h2 class="landscape__title">Шоссе</h2>
+          <p class="landscape__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+          <div class="landscape__picture"></div>
+        </div>
+        <div class="landscape__type landscape__type_class_out">
           <h2 class="landscape__title">Шоссе</h2>
           <p class="landscape__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
           <div class="landscape__picture"></div>
@@ -53,24 +64,30 @@
       <div class="bikes__header">
         <h2 class="bikes__title">Велосипеды</h2>
         <nav class="bikes__menu">
+          <button type="button" class="bikes__open-button"></button>
           <button type="button" class="bikes__button bikes__button_active">Шоссе</button>
           <button type="button" class="bikes__button">Грэвел</button>
           <button type="button" class="bikes__button">TT</button>
         </nav>
     </div>
       <div class="bikes__showcase">
-        <a class="bikes__link" href="#">
-          <div class="bikes__bike"><img class="bikes__bike-image" src="./images/highway_1.png"></div>
+        <a class="bikes__link bikes__link_class_main" href="#">
+          <div class="bikes__bike "><img class="bikes__bike-image" src="./images/highway_1.png"></div>
           <p class="bikes__bike-name">Cervelo Caledonia-5</p>
         </a>
-        <a class="bikes__link" href="#">
+        <a class="bikes__link bikes__link_class_second" href="#">
           <div class="bikes__bike"><img class="bikes__bike-image" src="./images/highway_2.png"></div>
           <p class="bikes__bike-name">Cannondale Systemsix Himod</p>
         </a>
-        <a class="bikes__link" href="#">
+        <a class="bikes__link bikes__link_class_last" href="#">
           <div class="bikes__bike"><img class="bikes__bike-image" src="./images/highway_3.png"></div>
           <p class="bikes__bike-name">Trek Domane SL-7</p>
         </a>
+        <div class="bikes__select-buttons">
+          <button class="bikes__select-button bikes__select-button_active" id="select1"></button>
+          <button class="bikes__select-button" id="select2"></button>
+          <button class="bikes__select-button" id="select3"></button>
+        </div>
       </div>
     </section>
     <section class="training">

@@ -33,6 +33,10 @@
   @include secondary-text;
   font-size: 18px;
   line-height: 28px;
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 @mixin background-picture {
@@ -48,4 +52,13 @@
   position: absolute;
   height: 16px;
   @include background-picture;
+}
+
+@mixin close-button_el {
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 3px;
+  background: $text-color;
+  transition: 0.5s;
 }
