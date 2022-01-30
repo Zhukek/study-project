@@ -5,3 +5,5 @@
 
 
 В работе используется препроцессор SCSS
+
+[Ссылка на GithubPages](https://zhukek.github.io/study-project/)
