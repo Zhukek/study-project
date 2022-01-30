@@ -1,7 +1,7 @@
 .header {
   @include block-stack;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -12,6 +12,9 @@
   margin: 0;
   padding: 0;
   background-color: $background;
+  &_theme_dark {
+    background-color: $background-dark;
+  }
   &__menu {
     display: flex;
     flex-direction: row;
@@ -28,6 +31,9 @@
     padding: 0;
     height: fit-content;
     transition: 0.3s;
+    &_theme_dark {
+      color: $button-text;
+    }
     &:hover {
       opacity: 0.75;
     }
@@ -52,9 +58,13 @@
     overflow: hidden;
     height: 74px;
     width: 100%;
+    transition: 0.5s ease-in-out;
+    &_open {
+      height: 100%;
+    }
     &__menu {
       flex-direction: column;
-      background-color: $background;
+      background-color: inherit;
       margin: 144px auto 0 auto;
     }
 
@@ -71,7 +81,7 @@
       position: relative;
       border-bottom: 3px solid $text-color;
       box-sizing: border-box;
-      transition: 0.3s;
+      transition: transform 0.3s;
       cursor: pointer;
       overflow: hidden;
 
@@ -85,7 +95,17 @@
         top: 50%;
       }
 
-      &:hover {
+      &_theme_dark {
+        border-color: $button-text;
+        &::after {
+          background: $button-text;
+        }
+        &::before {
+          background: $button-text;
+        }
+      }
+
+      &_open {
         border: 0;
 
         &::after {

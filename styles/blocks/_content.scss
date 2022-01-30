@@ -12,10 +12,13 @@
     letter-spacing: -0.5px;
     max-width: $article-width;
     height: fit-content;
+    &_theme_dark {
+      color: $button-text;
+    }
   }
 
   &__image {
-    background-image: url(../../images/Placeholder.png);
+    background-image: url(../images/Placeholder.png);
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column: 2;
@@ -59,6 +62,9 @@
     margin: 0;
     max-width: $article-width;
     @include secondary-abstract;
+    &_theme_dark {
+      color: $secondary-dark;
+    }
   }
 
   &__button {
@@ -87,6 +93,9 @@
     color: $text-color;
     margin: 0;
     display: inline-block;
+    &_theme_dark {
+      color: $button-text;
+    }
     &::after {
       content: '';
       display: inline-block;
@@ -111,7 +120,7 @@
       margin: 0;
       width: 650px;
       @include background-picture;
-      background-image: url(../../images/quote_picture.png);
+      background-image: url(../images/quote_picture.png);
     }
   }
 
@@ -125,6 +134,9 @@
       @include text-stack (600, 34px, 44px);
       letter-spacing: -0.5px;
       color: $text-color;
+      &_theme_dark {
+        color: $button-text;
+      }
     }
 
     &-author {
@@ -132,12 +144,18 @@
       padding: 0;
       @include text-stack (500, 20px, 32px);
       color: $text-color;
+      &_theme_dark {
+        color: $button-text;
+      }
     }
 
     &-prof {
       margin: 0;
       padding: 0;
       @include secondary-abstract;
+      &_theme_dark {
+        color: $secondary-dark;
+      }
     }
   }
 

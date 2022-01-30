@@ -15,10 +15,18 @@
     letter-spacing: -0.5px;
     margin: 0;
     padding: 0;
+    color: $text-color;
+    &_theme_dark {
+      color: $button-text;
+    }
   }
 
   &__menu {
     display: flex;
+    background-color: $background;
+    &_theme_dark {
+      background-color: $background-dark;
+    }
   }
 
   &__button {
@@ -28,6 +36,10 @@
     border: none;
     background-color: $background;
     transition: 0.5s;
+    &_theme_dark {
+      background-color: $background-dark;
+      color: $secondary-dark;
+    }
     &:hover {
       cursor: pointer;
       opacity: 0.6;
@@ -36,6 +48,9 @@
       font-weight: 600;
       opacity: 1;
       color: $text-color;
+      &_theme_dark {
+        color: $button-text;
+      }
       &:hover {
         opacity: 0.75;
       }
@@ -47,7 +62,7 @@
     background-color: inherit;
     width: 10px;
     height: 10px;
-    background-image: url(../../images/Vector_left.svg);
+    background-image: url(../images/Vector_left.svg);
     @include background-picture;
     transform: rotate(270deg);
     transition: 0.3s;
@@ -98,6 +113,9 @@
     @include text-stack(600, 18px, 22px);
     &:hover {
       opacity: 0.75;
+    }
+    &_theme_dark {
+      color: $button-text;
     }
   }
 
@@ -201,7 +219,9 @@
       transition: 0.3s;
       z-index: 1;
       opacity: 1;
-      background-color: inherit;
+      &_open {
+        height: 90px;
+      }
     }
 
     &__open-button {
@@ -209,6 +229,10 @@
       position: absolute;
       right: 12px;
       top: 10px;
+      transition: 0.3s;
+      &_open {
+        transform: rotate(90deg);
+      }
     }
 
     &__button {
@@ -252,6 +276,7 @@
     }
 
     &__bike-name {
+      color: $text-color;
       width: 100%;
       text-align: center;
       margin: 0 auto 16px auto;

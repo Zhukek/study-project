@@ -2,6 +2,9 @@
   width: 100%;
   background-color: $footer-color;
   position: relative;
+  &_theme_dark {
+    background-color: $footer-dark
+  }
 
   &__content {
     @include section-base(1200px);
@@ -22,6 +25,9 @@
     @include text-stack(600, 24px, 32px);
     color: $text-color;
     max-width: 230px;
+    &_theme_dark {
+      color: $button-text;
+    }
   }
 
   &__fieldset {
@@ -42,23 +48,37 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: $footer-color;
+    background-color: inherit;
     color: $secondary-text;
     opacity: 0.7;
     @include text-stack(500, 13px, 28px);
     transition: 0.5s;
     padding-left: 20px;
     border: 1px solid rgba(199, 199, 199, 0.5);
+    outline: none;
+
     &:focus {
       border-color:  #C7C7C7;
       & ~ .footer__submit-button {
         display: block;
       }
     }
-    outline: none;
+
     &:hover {
       opacity: 1;
       color: $text-color;
+    }
+
+    &_theme_dark {
+      color: $button-text;
+      opacity: 0.5;
+      border: 1px solid rgb(125, 125, 125);
+      &:focus {
+        border-color: rgb(125, 125, 125);
+      }
+      &:hover {
+        color: $button-text;
+      }
     }
   }
 
@@ -72,9 +92,17 @@
     width: 40px;
     align-self: center;
     color: $text-color;
+    background-color: inherit;
     @include text-stack(500, 13px, 28px);
     cursor: pointer;
     display: none;
+    &_theme_dark {
+      color: $button-text;
+      opacity: 0.5;
+    }
+    &_active {
+      display: block
+    }
   }
 
   &__roadclub {
@@ -98,7 +126,7 @@
       position: relative;
       &::after {
         content: '';
-        background-image: url(../../images/Logo.svg);
+        background-image: url(../images/Logo.svg);
         width: 32px;
         position: absolute;
         height: 32px;

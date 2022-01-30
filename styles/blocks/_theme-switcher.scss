@@ -30,6 +30,7 @@
     transition: 0.3s;
     &_theme_dark {
       padding-left: 20px;
+      background-color: $switcher-background;
     }
   }
 
@@ -39,7 +40,6 @@
     border-radius: 9999px;
     background-color: $button-color;
     margin: 2px;
-
   }
 
   &__dark {
@@ -50,5 +50,14 @@
 
   @media screen and (max-width: 600px) {
     display: none;
+    &_open {
+      margin: 0;
+      display: flex;
+      position: fixed;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
   }
 }
