@@ -21,11 +21,8 @@
 
   &__image {
     margin: 0;
-    padding-bottom: 76%;
-    @include background-picture;
     max-width: 580px;
     width: 100%;
-    background-image: url(../images/training.png);
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column: 2;
@@ -87,7 +84,6 @@
       grid-row: 2;
       max-width: 700px;
       justify-self: center;
-      padding-bottom: 79%;
     }
 
     &__content {

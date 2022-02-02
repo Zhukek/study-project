@@ -1,8 +1,8 @@
 const headerButton = document.querySelector('.header__button')
 
 const landscapesContainer = document.querySelector('.landscape__types')
-const landscapesButtonLeft = document.querySelector('.landscape__button_left')
-const landscapesButtonRight = document.querySelector('.landscape__button_right')
+const landscapesButtonLeft = document.querySelector('.landscape__button_prev')
+const landscapesButtonRight = document.querySelector('.landscape__button_next')
 
 const bikeLinkFirst = document.querySelector('.bikes__link_class_main')
 const bikePictureFirst = bikeLinkFirst.querySelector('.bikes__bike-image')
@@ -234,8 +234,8 @@ themeSwitcher.addEventListener('click', function () {
   changeColor ('landscape__title')
   changeColor ('landscape__description')
   changeColor ('landscape__button')
-  changeColor ('landscape__button_right')
-  changeColor ('landscape__button_left')
+  changeColor ('landscape__button_next')
+  changeColor ('landscape__button_prev')
   changeColor ('bikes__title')
   changeColor ('bikes__menu')
   changeColor ('bikes__bike-name')
