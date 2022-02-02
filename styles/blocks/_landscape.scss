@@ -92,7 +92,7 @@
     opacity: 0;
     transition: 0.5s;
   }
-  &__rectangle_image {
+  &__rectangle-image {
     width: 50px;
   }
 
@@ -124,7 +124,7 @@
       opacity: 0.6;
       cursor: pointer;
     }
-    &_right {
+    &_next {
       &::after {
         @include vector;
         transform: rotate(180deg);
@@ -135,7 +135,7 @@
         }
       }
     }
-    &_left {
+    &_prev {
       &::after {
         @include vector;
       }
@@ -150,6 +150,7 @@
   @media screen and (max-width: 1360px) {
 
     &__types {
+      align-items: start;
       margin: 40px 0;
       width: 300%;
       justify-content: space-between;
@@ -187,7 +188,7 @@
       width: 70px;
     }
 
-    &__rectangle_image {
+    &__rectangle-image {
       width: 35px;
     }
 

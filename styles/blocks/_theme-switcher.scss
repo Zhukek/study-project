@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
 
-  &__light {
+  &_ico {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -27,25 +27,26 @@
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
-    transition: 0.3s;
+    position: relative;
+    &::after {
+      content: '';
+      height: 20px;
+      width: 20px;
+      border-radius: 9999px;
+      background-color: $button-color;
+      margin: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.3s;
+      }
     &_theme_dark {
       padding-left: 20px;
       background-color: $switcher-background;
+      &::after {
+        margin-left: 20px;
+      }
     }
-  }
-
-  &__switcher {
-    height: 20px;
-    width: 20px;
-    border-radius: 9999px;
-    background-color: $button-color;
-    margin: 2px;
-  }
-
-  &__dark {
-    height: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   @media screen and (max-width: 600px) {

@@ -18,19 +18,24 @@
   }
 
   &__image {
-    background-image: url(../images/Placeholder.png);
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column: 2;
-    @include background-picture;
-    background-position: right top;
     position: relative;
     max-height: 836px;
     box-sizing: border-box;
   }
 
-  &__bike{
+  &__picture {
     margin: 0;
+    max-height: 836px;
+    position: absolute;
+    padding: 0 0 0 200px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  &__bike{
     background-color: $background;
     border-radius: 20px;
     width: fit-content;
@@ -119,8 +124,6 @@
     &-picture {
       margin: 0;
       width: 650px;
-      @include background-picture;
-      background-image: url(../images/quote_picture.png);
     }
   }
 
@@ -163,6 +166,10 @@
 
     grid-template-columns: 400px 640px;
 
+    &__picture {
+      padding-left: 30px;
+    }
+
     &__quote {
       margin: 0 auto;
       &-author {
@@ -174,8 +181,9 @@
       min-height: fit-content;
 
       &-picture {
-        width: 400px;
+        max-width: 600px;
         background-position: top;
+        width: 100%;
         min-width: 284px;
       }
     }
@@ -185,8 +193,16 @@
 
     grid-template-columns: 400px 1fr;
 
+    &__picture {
+      max-height: 100%;
+    }
+
+    &__bike {
+      margin: 100px auto 20px 0;
+    }
+
     &__bike-image{
-      width: 180px;
+      width: 260px;
       margin: 10.5px 26.5px;
     }
 
@@ -197,20 +213,6 @@
 
     &__text {
       max-width: 350px;
-    }
-
-    &__image {
-      background-position: top right;
-      height: 0;
-      padding-bottom: 137%;
-      overflow: visible;
-    }
-
-    &__bike {
-      position: absolute;
-      margin: 0;
-      left: -30px;
-      top: 151px;
     }
 
     &__description {
@@ -237,6 +239,10 @@
   @media screen and (max-width: 940px) {
     grid-template-columns: 1fr;
     row-gap: 40px;
+    grid-template-rows: minmax(1fr, 2fr);
+    &__image {
+      height: 109vw;
+    }
 
     &__title {
       margin: 20px auto 0 auto;
@@ -245,8 +251,6 @@
     &__image {
       grid-row: 2;
       grid-column: 1;
-      margin: 0 0 0 30px;
-      padding-bottom: 122.5%;
     }
 
     &__text {
@@ -273,11 +277,6 @@
       padding: 20px 0 0 0;
       grid-column: 1;
       flex-direction: column;
-
-      &-picture {
-        width: 100%;
-        padding-bottom: 71.8%;
-      }
     }
 
     &__quote {
@@ -286,6 +285,12 @@
       &-author {
         margin: 40px 0 4px 0;
       }
+    }
+  }
+
+  @media screen and (max-width:640px) {
+    &__bike-image {
+      width: 180px;
     }
   }
 }
