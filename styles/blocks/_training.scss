@@ -1,0 +1,108 @@
+.training {
+  @include section-base(1200px);
+  padding: 150px 0 120px 0;
+  margin: 0 auto;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 110px;
+
+  &__title {
+    max-width: $article-width;
+    @include text-stack(700, 55px, 60px);
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    &_theme_dark {
+      color: $button-text;
+    }
+  }
+
+  &__image {
+    margin: 0;
+    max-width: 580px;
+    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 2;
+    justify-self: end;
+    align-self: start;
+  }
+
+  &__content {
+    max-width: $article-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__text {
+    @include secondary-abstract;
+    margin: 0;
+    padding: 0;
+    &_theme_dark {
+      color: $secondary-dark;
+    }
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    padding: 0;
+    margin: 0 30px 0 0;
+    text-decoration: none;
+    color: $text-color;
+    @include text-stack(600, 18px, 28px);
+    &_theme_dark {
+      color: $button-text;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    padding: 40px 0 60px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 40px;
+
+
+    &__title {
+      grid-row: 1;
+      width: 100%;
+    }
+
+    &__image {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 700px;
+      justify-self: center;
+    }
+
+    &__content {
+      grid-row: 3;
+    }
+
+    &__links {
+      margin-top: 40px;
+    }
+  }
+
+    @media screen and (max-width: 500px) {
+      border-top: $border-top;
+      &__title {
+        @include text-stack(700, 32px, 40px);
+      }
+
+      &__link {
+        @include text-stack(600, 14px, 20px);
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@mixin block-stack {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+@mixin section-base($width: 1320px) {
+  width: $width;
+  @media screen and (max-width: 1360px) {
+    width: 89%;
+    margin: 0 auto;
+  }
+}
+
+@mixin section-stack {
+  margin: 0 0 0 auto;
+  padding: 0;
+  @include section-base;
+}
+
+@mixin text-stack($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin secondary-text {
+  color: $secondary-text;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+@mixin secondary-abstract {
+  @include secondary-text;
+  font-size: 18px;
+  line-height: 28px;
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@mixin background-picture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin vector {
+  content: "";
+  background-image: url(../images/Vector_left.svg);
+  width: 16px;
+  position: absolute;
+  height: 16px;
+  @include background-picture;
+}
+
+@mixin close-button_el {
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 3px;
+  background: $text-color;
+  transition: 0.5s;
+}

@@ -5,26 +5,132 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MonthOfLendings</title>
-  <link rel="stylesheet" href="./#">
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
-<body>
-  <header>
-    <a href="#">Покрытия и градиенты</a>
-    <a href="#">Велосипеды</a>
-    <a href="#">Тренировки</a>
+<body class="body">
+  <header class="header">
+    <nav class="header__menu">
+      <a class="header__link" href="#landscape">Покрытия и градиенты</a>
+      <a class="header__link" href="#bikes">Велосипеды</a>
+      <a class="header__link" href="#training">Тренировки</a>
+    </nav>
+    <button type="button" class="header__button"></button>
   </header>
-  <main>
-    <div>
-      <h1></h1>
-      <img src="./#">
-      <p></p>
-      <button type="button"></button>
+
+  <main class="page">
+    <section class="content">
+      <h1 class="content__title">Шоссе, ТТ и Грэвел</h1>
+      <div class="content__image">
+        <img class="content__picture" src="./images/Placeholder.png" alt="Дорога">
+        <a class="content__bike-link" target="_blank" href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J">
+          <div class="content__bike"><img src="./images/bike_systemsix.png" alt="Велосипед" class="content__bike-image"></div>
+        </a>
+      </div>
+      <div class="content__description">
+        <p class="content__text">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+        <button class="content__button" type="button" onclick="location.href='#bikes'">Подробнее</button>
+        <p class="content__sign">Cannondale Systemsix</p>
+      </div>
+      <div class="content__decoration">
+        <img class="content__decoration-picture" alt="Красивая картинка" src="./images/quote_picture.png">
+        <div class="content__quote">
+          <p class="content__quote-text">«Катайся много или мало, долго или коротко, как хочешь - но катайся» </p>
+          <p class="content__quote-author">Эдди Меркс</p>
+          <p class="content__quote-prof">Велогонщик</p>
+        </div>
+      </div>
+    </section>
+    <section class="landscape" id="landscape">
+      <div class="landscape__types">
+        <div class="landscape__type landscape__type_active"  id="highway-landscape">
+          <h2 class="landscape__title">Шоссе</h2>
+          <p class="landscape__description">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+          <div class="landscape__picture-container">
+            <img class="landscape__picture" src="./images/highway_picture.png" alt="Ландшафт">
+            <div class="landscape__rectangle"><img class="landscape__rectangle-image" src="./images/Vector_highway.svg" alt="тип ландшафта"></div>
+          </div>
+        </div>
+        <div class="landscape__type"  id="gravel-landscape">
+          <h2 class="landscape__title">Грэвел</h2>
+          <p class="landscape__description">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
+          <div class="landscape__picture-container">
+            <img class="landscape__picture" src="./images/gravel_picture.png" alt="Ландшафт">
+            <div class="landscape__rectangle"><img class="landscape__rectangle-image" src="./images/Vector_gravel.svg" alt="тип ландшафта"></div>
+          </div>
+        </div>
+        <div class="landscape__type" id="TT-landscape">
+          <h2 class="landscape__title">ТТ</h2>
+          <p class="landscape__description">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
+          <div class="landscape__picture-container">
+            <img class="landscape__picture " src="./images/TT_picture.png" alt="Ландшафт">
+            <div class="landscape__rectangle"><img class="landscape__rectangle-image" src="./images/Vector_TT.svg" alt="тип ландшафта"></div>
+          </div>
+        </div>
+      </div>
+      <div class="landscape__buttons">
+        <button type="button" class="landscape__button landscape__button_prev"></button>
+        <button type="button" class="landscape__button landscape__button_next"></button>
+      </div>
+    </section>
+    <section class="bikes" id="bikes">
+      <div class="bikes__header">
+        <h2 class="bikes__title">Велосипеды</h2>
+        <nav class="bikes__menu">
+          <button type="button" class="bikes__open-button"></button>
+          <button type="button" class="bikes__button bikes__button_active" id="highway">Шоссе</button>
+          <button type="button" class="bikes__button" id="gravel">Грэвел</button>
+          <button type="button" class="bikes__button" id="TT">TT</button>
+        </nav>
     </div>
-    <div></div>
-
+      <div class="bikes__showcase">
+        <a target="_blank" class="bikes__link bikes__link_class_main" href="#">
+          <div class="bikes__bike "><img class="bikes__bike-image" src="#" alt="велосипед"></div>
+          <p class="bikes__bike-name"></p>
+        </a>
+        <a target="_blank" class="bikes__link bikes__link_class_second" href="#">
+          <div class="bikes__bike"><img class="bikes__bike-image" src="#" alt="велосипед"></div>
+          <p class="bikes__bike-name"></p>
+        </a>
+        <a target="_blank" class="bikes__link bikes__link_class_last" href="#">
+          <div class="bikes__bike"><img class="bikes__bike-image" src="#" alt="велосипед"></div>
+          <p class="bikes__bike-name"></p>
+        </a>
+        <div class="bikes__select-buttons">
+          <button class="bikes__select-button bikes__select-button_active" id="first"></button>
+          <button class="bikes__select-button" id="second"></button>
+          <button class="bikes__select-button" id="third"></button>
+        </div>
+      </div>
+    </section>
+    <section class="training" id="training">
+      <h2 class="training__title">Тренировки</h2>
+      <img class="training__image" alt="картинка" src="./images/training.png">
+      <div class="training__content">
+        <p class="training__text">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+        <div class="training__links">
+          <a href="https://www.strava.com" target="_blank" class="training__link">Strava</a>
+          <a href="https://www.komoot.com" target="_blank" class="training__link">Komoot</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-
+  <footer class="footer">
+    <div class="footer__content">
+      <form class="footer__form" id="mailForm" name="mailForm">
+        <p class="footer__subscribe">Подпишитесь на рассылку —</p>
+        <fieldset class="footer__fieldset">
+          <input type="email" class="footer__mail-input" name="mailInput" id="mailInput" value="" required placeholder="Ваш e-mail">
+          <input type="submit" class="footer__submit-button" value="ok">
+        </fieldset>
+      </form>
+      <p class="footer__roadclub">&#169; Road Club 2021</p>
+      <div class="theme-switcher">
+        <img class="theme-swithcer__ico" src="./images/theme-light.svg" alt="светлая">
+        <button type="button" class="theme-switcher__button"></button>
+        <img class="theme-swithcer__ico" src="./images/theme-dark.svg" alt="темная">
+      </div>
+    </div>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>

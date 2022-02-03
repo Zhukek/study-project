@@ -1,0 +1,296 @@
+.bikes {
+  @include section-base(1200px);
+  padding: 60px 0;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    @include text-stack(700, 55px, 60px);
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    &_theme_dark {
+      color: $button-text;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    background-color: $background;
+    &_theme_dark {
+      background-color: $background-dark;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    margin: 0 0 0 40px;
+    @include secondary-abstract;
+    border: none;
+    background-color: $background;
+    transition: 0.5s;
+    &_theme_dark {
+      background-color: $background-dark;
+      color: $secondary-dark;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+    &_active {
+      font-weight: 600;
+      opacity: 1;
+      color: $text-color;
+      &_theme_dark {
+        color: $button-text;
+      }
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__open-button {
+    border: none;
+    background-color: inherit;
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/Vector_left.svg);
+    @include background-picture;
+    transform: rotate(270deg);
+    transition: 0.3s;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 120px 0 0 0;
+  }
+
+  &__link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  &__bike {
+    margin: 0;
+    padding: 0;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: $background;
+    &:hover {
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
+    }
+  }
+
+  &__bike-image {
+    height: 340px;
+    width: 340px;
+    padding: 0;
+    margin: 20px;
+  }
+
+  &__bike-name {
+    color: $text-color;
+    padding: 0;
+    margin: 22px 0 0 0;
+    @include text-stack(600, 18px, 22px);
+    &:hover {
+      opacity: 0.75;
+    }
+    &_theme_dark {
+      color: $button-text;
+    }
+  }
+
+  &__select-buttons {
+    width: 7.8%;
+    max-width: 50px;
+    height: fit-content;
+    margin: 20px auto 40px auto;
+    padding: 0;
+    justify-content: space-between;
+    display: none;
+    min-width: 30px;
+  }
+
+  &__select-button {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background-color: $not-active-color;
+    &_active {
+      background-color: $text-color;
+    }
+  }
+
+  @media screen and (max-width: 1260px) {
+
+    &__bike-image {
+      height: 250px;
+      width: 250px;
+      margin: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__menu {
+      margin-top: 40px;
+    }
+
+    &__showcase {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__link {
+      width: fit-content;
+      margin: 0 auto;
+      &_class {
+        &_second {
+          display: none;
+        }
+
+        &_last {
+          display: none;
+        }
+      }
+    }
+
+    &__bike-image {
+      height: 340px;
+      width: 340px;
+      margin: 20px;
+    }
+
+    &__select-buttons {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 40px 0;
+    border-top: $border-top;
+
+    &__header {
+      position: relative;
+    }
+
+    &__title {
+      @include text-stack (700, 32px, 40px);
+    }
+
+    &__menu {
+      margin: 0;
+      top: 80px;
+      display: grid;
+      overflow: hidden;
+      width: 114px;
+      height: 30px;
+      border: $border-top;
+      position: absolute;
+      box-sizing: border-box;
+      transition: 0.3s;
+      z-index: 1;
+      opacity: 1;
+      &_open {
+        height: 90px;
+      }
+    }
+
+    &__open-button {
+      display: inline-block;
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      transition: 0.3s;
+      &_open {
+        transform: rotate(90deg);
+      }
+    }
+
+    &__button {
+      padding-left: 12px;
+      box-sizing: border-box;
+      width: 70%;
+      height: 30px;
+      margin: 0;
+      text-align: start;
+      font-size: 11px;
+      line-height: 14px;
+      &_active {
+        grid-row: 1;
+      }
+    }
+
+    &__showcase {
+      margin: 90px auto 0 auto;
+    }
+
+    &__bike-image {
+      height: 254px;
+      width: 254px;
+      margin: 15px 15px 0 15px;
+    }
+
+    &__link {
+      background-color: $background;
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+      border-radius: 20px;
+      &:hover {
+        filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
+      }
+    }
+
+    &__bike {
+      filter: none;
+      &:hover {
+        filter: none;
+      }
+    }
+
+    &__bike-name {
+      color: $text-color;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 16px auto;
+      @include text-stack (600, 14px, 18px);
+    }
+
+    &__select-buttons {
+      min-width: 22px;
+    }
+
+    &__select-button {
+      width: 4px;
+      height: 4px;
+    }
+  }
+}

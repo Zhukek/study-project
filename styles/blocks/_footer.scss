@@ -1,0 +1,139 @@
+.footer {
+  width: 100%;
+  background-color: $footer-color;
+  position: relative;
+  &_theme_dark {
+    background-color: $footer-dark
+  }
+
+  &__content {
+    @include section-base(1200px);
+    margin: 0 auto;
+    padding: 80px 0 60px 0;
+  }
+
+  &__form {
+    margin: 0;
+    border: none;
+    height: fit-content;
+    max-width: 360px;
+  }
+
+  &__subscribe {
+    margin: 0;
+    padding: 0;
+    @include text-stack(600, 24px, 32px);
+    color: $text-color;
+    max-width: 230px;
+    &_theme_dark {
+      color: $button-text;
+    }
+  }
+
+  &__fieldset {
+    margin: 50px 0 0 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border: none;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &__mail-input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    color: $secondary-text;
+    opacity: 0.7;
+    @include text-stack(500, 13px, 28px);
+    transition: 0.5s;
+    padding-left: 20px;
+    border: 1px solid rgba(199, 199, 199, 0.5);
+    outline: none;
+
+    &:focus {
+      border-color:  #C7C7C7;
+      & ~ .footer__submit-button {
+        display: block;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      color: $text-color;
+    }
+
+    &_theme_dark {
+      color: $button-text;
+      opacity: 0.5;
+      border: 1px solid rgb(125, 125, 125);
+      &:focus {
+        border-color: rgb(125, 125, 125);
+      }
+      &:hover {
+        color: $button-text;
+      }
+    }
+  }
+
+  &__submit-button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    position: absolute;
+    right: 10px;
+    height: 60%;
+    width: 40px;
+    align-self: center;
+    color: $text-color;
+    background-color: inherit;
+    @include text-stack(500, 13px, 28px);
+    cursor: pointer;
+    display: none;
+    &_theme_dark {
+      color: $button-text;
+      opacity: 0.5;
+    }
+    &_active {
+      display: block
+    }
+  }
+
+  &__roadclub {
+    @include text-stack (600, 14px, 20px);
+    margin: 100px 0 0 0;
+    padding: 0;
+    color: #CFCFCF;
+  }
+
+  @media screen and (max-width: 600px) {
+    &__content {
+      padding: 60px 0 25px 0;
+    }
+
+    &__fieldset {
+      margin-top: 40px;
+    }
+
+    &__roadclub {
+      font-weight: 500px;
+      position: relative;
+      &::after {
+        content: '';
+        background-image: url(../images/Logo.svg);
+        width: 32px;
+        position: absolute;
+        height: 32px;
+        @include background-picture;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
