@@ -8,8 +8,9 @@
 
 ## Технологии:
 - HTML
-- SCSS
+- SCSS - с использованием flexbox и grid
 - JavaScript
+- Методология - БЭМ
 
 Посмотреть страницу можно на GithubPages:
 [Ссылка на GithubPages](https://zhukek.github.io/study-project/)
